@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Simple todo lists
+		</title>
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+<body style="background-image: url('back_ground.jpg');">
+	<header>
+		<h1>
+			simple todo lists
+		</h1>
+		<h3>
+			from ruby garage
+		</h3>
+	</header>
+	<main>
+		<section>
+			<table> 
+				<thead>
+					<tr>
+						<th scope="col">
+							<i class="fa fa-list-alt"></i>
+						</th>
+						<th scope="col">Complete the test task for Ruby Garage</th>
+						<th scope="col" class ="thirdcol">
+							<div class="hide">
+								<button type="button" class="btn btn-primary"> <i class='fas fa-pen'></i></button>
+								<button type="button" class="btn btn-primary"><i class='fas fa-trash-alt'></i></button>
+							</div>	
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="table-dark" >
+						<th scope="row">
+							<i class='fas fa-plus'></i>
+						</th>
+						<td colspan='2'>
+							<div class="input-group mb-3">
+								<input type="text" class="form-control" placeholder="Start typing here to create a task..." >
+								<div class="input-group-append">
+									<button class="btn btn-success" type="submit">Add Task</button>  
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr class="table table-bordered">
+						<th scope="row">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+								<label class="form-check-label" for="inlineCheckbox1"></label>
+							</div>
+						</th>
+						<td>Open this mock-up in Adobe Fireworks</td>
+						<td class ="thirdcol">
+							<div class="hide">
+								<button type="button" class="btn btn-light"> <i class='fas fa-sort'></i></button>
+								<button type="button" class="btn btn-light"> <i class='fas fa-pen'></i></button>
+								<button type="button" class="btn btn-light"><i class='fas fa-trash-alt'></i></button>
+							</div>	
+						</td>
+					</tr>
+					<tr class="table table-bordered">
+						<th scope="row">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+								<label class="form-check-label" for="inlineCheckbox1"></label>
+							</div>
+						</th>
+						<td>Attentively check the file</td>
+						<td class ="thirdcol">
+							<div class="hide">
+								<button type="button" class="btn btn-light"> <i class='fas fa-sort'></i></button>
+								<button type="button" class="btn btn-light"> <i class='fas fa-pen'></i></button>
+								<button type="button" class="btn btn-light"><i class='fas fa-trash-alt'></i></button>
+							</div>
+						</td>
+					</tr>
+					<tr class="table table-bordered">
+						<th scope="row">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+								<label class="form-check-label" for="inlineCheckbox1"></label>
+							</div>
+						</th>
+						<td>Write HTML & CSS</td>
+						<td class ="thirdcol">
+							<div class="hide">
+								<button type="button" class="btn btn-light"> <i class='fas fa-sort'></i></button>
+								<button type="button" class="btn btn-light"> <i class='fas fa-pen'></i></button>
+								<button type="button" class="btn btn-light"><i class='fas fa-trash-alt'></i></button>
+							</div>
+						</td>
+					</tr>
+					<tr class="table table-bordered">
+						<th scope="row">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+								<label class="form-check-label" for="inlineCheckbox1"></label>
+							</div>
+						</th>
+						<td>Add Javascript to implement adding/editing/removing for todo items and lists taking into account as more use cases as possible</td>
+						<td class ="thirdcol">
+							<div class="hide">
+								<button type="button" class="btn btn-light"> <i class='fas fa-sort'></i></button>
+								<button type="button" class="btn btn-light"> <i class='fas fa-pen'></i></button>
+								<button type="button" class="btn btn-light"><i class='fas fa-trash-alt'></i></button>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		
+		<section>
+			<table> 
+				<thead>
+					<tr>
+						<th scope="col">
+							<i class="fa fa-list-alt"></i>
+						</th>
+						<th scope="col">Complete the test task for Ruby Garage</th>
+						<th scope="col" class ="thirdcol">
+							<div class="hide">
+								<button type="button" class="btn btn-primary"> <i class='fas fa-pen'></i></button>
+								<button type="button" class="btn btn-primary"><i class='fas fa-trash-alt'></i></button>
+							</div>	
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="table-dark" >
+						<th scope="row">
+							<i class='fas fa-plus'></i>
+						</th>
+						<td colspan='2'>
+							<div class="input-group mb-3">
+								<input type="text" class="form-control" placeholder="Start typing here to create a task..." >
+								<div class="input-group-append">
+									<button class="btn btn-success" type="submit">Add Task</button>  
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr class="table table-bordered">
+						<th scope="row">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+								<label class="form-check-label" for="inlineCheckbox1"></label>
+							</div>
+						</th>
+						<td>Open this mock-up in Adobe Fireworks</td>
+						<td class ="thirdcol">
+							<div class="hide">
+								<button type="button" class="btn btn-light"> <i class='fas fa-sort'></i></button>
+								<button type="button" class="btn btn-light"> <i class='fas fa-pen'></i></button>
+								<button type="button" class="btn btn-light"><i class='fas fa-trash-alt'></i></button>
+							</div>	
+						</td>
+					</tr>
+					<tr class="table table-bordered">
+						<th scope="row">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+								<label class="form-check-label" for="inlineCheckbox1"></label>
+							</div>
+						</th>
+						<td>Attentively check the file</td>
+						<td class ="thirdcol">
+							<div class="hide">
+								<button type="button" class="btn btn-light"> <i class='fas fa-sort'></i></button>
+								<button type="button" class="btn btn-light"> <i class='fas fa-pen'></i></button>
+								<button type="button" class="btn btn-light"><i class='fas fa-trash-alt'></i></button>
+							</div>
+						</td>
+					</tr>
+					<tr class="table table-bordered">
+						<th scope="row">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+								<label class="form-check-label" for="inlineCheckbox1"></label>
+							</div>
+						</th>
+						<td>Write HTML & CSS</td>
+						<td class ="thirdcol">
+							<div class="hide">
+								<button type="button" class="btn btn-light"> <i class='fas fa-sort'></i></button>
+								<button type="button" class="btn btn-light"> <i class='fas fa-pen'></i></button>
+								<button type="button" class="btn btn-light"><i class='fas fa-trash-alt'></i></button>
+							</div>
+						</td>
+					</tr>
+					<tr class="table table-bordered">
+						<th scope="row">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+								<label class="form-check-label" for="inlineCheckbox1"></label>
+							</div>
+						</th>
+						<td>Add Javascript to implement adding/editing/removing for todo items and lists taking into account as more use cases as possible</td>
+						<td class ="thirdcol">
+							<div class="hide">
+								<button type="button" class="btn btn-light"> <i class='fas fa-sort'></i></button>
+								<button type="button" class="btn btn-light"> <i class='fas fa-pen'></i></button>
+								<button type="button" class="btn btn-light"><i class='fas fa-trash-alt'></i></button>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section class="wrapper">
+			<button type="button" class="btn btn-primary"><i class="fas fa-plus"></i>  Add TODO Lists</button>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; Ruby Garage</p>
+	</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>

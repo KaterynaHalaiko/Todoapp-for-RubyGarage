@@ -1,0 +1,61 @@
+{% extends "todoapp/base.html" %}
+
+{% load i18n %}
+
+{% block meta_title %}{% trans "Project List" %}{% endblock meta_title %}
+
+{% block title %}{% trans "Project List" %}{% endblock title %}
+
+
+{% block content %}
+<a href="{% url "project_add" %}" class="btn btn-primary">{% trans "Add Project" %}</a>
+
+<!-- Start Project Listing -->
+{% if project %}
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th><a href="{% url "project" %}?order_by=title{% if request.GET.order_by == 'title' and request.GET.reverse != '1' %}&amp;reverse=1{% endif %}">{% trans "Title" %}{% if request.GET.order_by == 'title' and request.GET.reverse != '1' %} &uarr;{% elif request.GET.order_by == 'title' and request.GET.reverse == '1' %} &darr;{% endif %}</a></th>
+      <th>{% trans "Leader" %}</th>
+      <th>{% trans "Actions" %}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for group in project %}
+    <tr>
+      <td>
+        {% if is_paginated %}
+          {{ page_obj.start_index|add:forloop.counter0 }}
+        {% else %}
+          {{ forloop.counter }}
+        {% endif %}
+      </td>
+      <td><a href="{% url "project_edit" project.id %}">{{ project.title }}</td>
+      <td>{% if project.leader %}<a href="{% url "task_edit" project.leader.id %}">{{ project.leader.first_name }} {{ group.leader.last_name }}</a>{% else %}{% trans "Not Set" %}{% endif %}</td>
+      <td>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default dropdown-toggle"
+                  data-toggle="dropdown">{% trans "Action" %}
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="{% url "project_edit" project.id %}">{% trans "Edit" %}</a></li>
+            <li><a href="{% url "project_delete" project.id %}">{% trans "Delete" %}</a></li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<!-- End Project Listing -->
+{% else %}
+<p>{% trans "There is no project in the database yet." %}</p>
+{% endif %}
+
+{% with object_list=project %}
+  {% include "todoapp/pagination.html" %}
+{% endwith %}
+
+{% endblock content %}

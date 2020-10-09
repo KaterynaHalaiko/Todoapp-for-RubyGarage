@@ -1,0 +1,72 @@
+h1 {
+	text-align: center;
+	font-family:'Secular One', sans-serif;
+	text-transform: uppercase;
+}
+h3 {
+	text-align: center;
+	font-family:'Open Sans', sans-serif;
+	text-transform: uppercase;
+}
+
+i.fa-plus {
+	color: green;
+	font-size:24px;
+}
+
+i.fa-list-alt {
+	color: black;
+	font-size:24px;
+}
+
+.wrapper {
+    text-align: center;
+}
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   font-size:16px;
+   text-align: center;
+   color:white;
+}
+
+.hide {
+  display: none;
+}
+
+table tr:hover {
+        background-color: #EEE8AA;
+        }
+		
+ table tr:hover .hide {
+        display: block;
+        }
+		
+body{
+	backdrop-filter: blur(50px);
+	max-width: 100%;
+	height:auto;
+}
+
+table {
+    text-align: center;
+    width: 700px;
+    max-width: 100%;
+    margin: 20px auto 0;
+        }
+
+table td, table th {
+            height: 50px;
+            width: 20%;
+            padding: 10px;
+        }
+table tr td:first-child, table tr th:first-child {
+            width: 5%;
+}
+
+
+
+
+

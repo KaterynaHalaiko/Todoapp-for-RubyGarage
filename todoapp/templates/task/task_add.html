@@ -1,0 +1,71 @@
+{% extends "task/base.html" %}
+
+{% load i18n %}
+{% load static from staticfiles %}
+{% load str2int %}
+
+{% block meta_title %}{% trans "Add Task" %}{% endblock meta_title %}
+
+{% block title %}{% trans "Add Task" %}{% endblock title %}
+
+{% block status_message %}
+  {% if errors %}
+  <div class="alert alert-warning" role="alert">{% trans "Please, correct the following errors." %}
+  </div>
+  {% endif %}
+{% endblock status_message %}
+
+{% block content %}
+
+<form action="." method="post" enctype="multipart/form-data"
+      role="form" class="form-horizontal">
+  {% csrf_token %}
+
+  <div class="form-group {% if errors.first_name %}has-error{% endif %}">
+    <label for="first_name" class="col-sm-2 control-label">{% trans "First Name" %}*</label>
+    <div class="col-sm-10">
+      <input type="text" value="{{ request.POST.first_name }}"
+             name="first_name" id="first_name"
+             class="form-control" />
+      <span class="help-block">{{ errors.first_name }}</span>
+    </div>
+  </div>
+  <div class="form-group {% if errors.last_name %}has-error{% endif %}">
+    <label for="last_name" class="col-sm-2 control-label">{% trans "Last Name" %}*</label>
+    <div class="col-sm-10">
+      <input type="text" value="{{ request.POST.first_name }}"
+             name="last_name" id="last_name"
+             class="form-control" />
+      <span class="help-block">{{ errors.last_name }}</span>
+    </div>
+  </div>
+  <div class="form-group {% if errors.middle_name %}has-error{% endif %}">
+    <label for="middle_name"class="col-sm-2 control-label">{% trans "Middle Name" %}</label>
+    <div class="col-sm-10">
+      <input type="text" value="{{ request.POST.first_name }}"
+             name="middle_name" id="middle_name"
+             class="form-control" />
+      <span class="help-block">{{ errors.middle_name }}</span>
+    </div>
+  </div>
+
+  <div class="form-group {% if errors.notes %}has-error{% endif %}">
+    <label for="notes" class="col-sm-2 control-label">{% trans "Extra Notes" %}</label>
+    <div class="col-sm-10">
+      <textarea name="notes" id="notes" class="form-control">{{ request.POST.notes }}</textarea>
+      <span class="help-block">{{ errors.notes }}</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label"></label>
+    <div class="col-sm-10">
+      <input type="submit" value="{% trans "Add" %}" name="add_button"
+             class="btn btn-primary" />
+      <button type="submit" name="cancel_button"
+              class="btn btn-link">{% trans "Cancel" %}</button>
+    </div>
+  </div>
+</form>
+
+
+{% endblock content %}
